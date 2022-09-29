@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_test:
+	# Don't run tests to prevent circular dependency. They depend on
+	# golang-testify, which depends on golang-objx.

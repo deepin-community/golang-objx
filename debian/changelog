@@ -1,0 +1,117 @@
+golang-objx (0.3.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Apply multi-arch hints.
+    + golang-github-stretchr-objx-dev: Add Multi-Arch: foreign.
+
+  [ Shengjing Zhu ]
+  * New upstream version 0.3.0
+  * Update Section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 27 Nov 2020 01:14:29 +0800
+
+golang-objx (0.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Exclude vendor dir for new version
+  * New upstream version 0.2.0
+  * Drop golang-objx-dev transitional package. (Closes: #939234)
+  * Update debhelper-compat to 13
+  * Add Rules-Requires-Root
+  * Update Standards-Version to 4.5.0 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 21 May 2020 18:03:03 +0800
+
+golang-objx (0.1.1+git20180825.ef50b0d-2) UNRELEASED; urgency=medium
+
+  * Bump debhelper from old 11 to 12.
+  * Set upstream metadata fields: Name.
+  * Remove obsolete fields Name from debian/upstream/metadata.
+  * Set upstream metadata fields: Repository.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Sat, 10 Aug 2019 20:49:35 +0000
+
+golang-objx (0.1.1+git20180825.ef50b0d-1) unstable; urgency=medium
+
+  * New upstream version 0.1.1+git20180825.ef50b0d
+
+ -- Anthony Fok <foka@debian.org>  Thu, 20 Dec 2018 01:19:47 -0700
+
+golang-objx (0.1.1-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream release 0.1.1
+  * Add debian/watch as upstream now have release tarballs
+  * Apply "cme fix dpkg" fixes to debian/control and debian/copyright,
+    adding "Testsuite: autopkgtest-pkg-go" field, setting Priority to optional,
+    bumping Standards-Version to 4.2.1, bumping debhelper version to (>= 11~),
+    and replacing "MIT" with "Expat" license, etc.
+  * Update Maintainer address in debian/control
+
+ -- Anthony Fok <foka@debian.org>  Thu, 20 Dec 2018 01:05:28 -0700
+
+golang-objx (0.0~git20150928.0.1a9d0bb-3) unstable; urgency=medium
+
+  * Change Build-Depends from golang-go to golang-any.
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 30 Jun 2017 23:38:06 -0600
+
+golang-objx (0.0~git20150928.0.1a9d0bb-2) unstable; urgency=medium
+
+  * debian/control: drop bogus built-using
+  * Add myself to the list of Uploaders
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Sat, 06 May 2017 13:42:12 +0200
+
+golang-objx (0.0~git20150928.0.1a9d0bb-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Transition package to "golang-github-stretchr-objx-dev"
+    for pkg-go policy compliance
+  * Update debian/control
+    - Bump Standards-Version to 3.9.8
+    - Use secure https URLs for Vcs-Browser and Vcs-Git
+    - Add XS-Go-Import-Path and Built-Using fields
+    - Remove dependency on golang-go
+    - Remove full stop from description synopsis
+  * Update debian/gbp.conf to that created by latest dh-make-golang
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Sun, 24 Apr 2016 11:06:19 +0800
+
+golang-objx (0.0~git20140527-4) unstable; urgency=medium
+
+  * Bump standards version to 3.9.6 (no changes).
+  * Fix empty short license in debian/copyright.
+  * Upload to unstable.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Sun, 26 Apr 2015 08:47:16 +0000
+
+golang-objx (0.0~git20140527-3) experimental; urgency=medium
+
+  * Change debian-branch in gbp.conf to 'unstable'.
+  * Change maintainer to go packaging team, move myself to uploaders.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Sat, 15 Nov 2014 21:26:41 +0000
+
+golang-objx (0.0~git20140527-2) unstable; urgency=medium
+
+  * Specify branch in Vcs-Git header.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Tue, 15 Jul 2014 17:21:30 +0200
+
+golang-objx (0.0~git20140527-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #746175)
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Sat, 22 Mar 2014 15:45:59 +0000
