@@ -110,10 +110,10 @@ func TestConversionJSONInt(t *testing.T) {
 	assert.Equal(t, 1, m.Get("b.data").Int())
 
 	assert.True(t, m.Get("c").IsInterSlice())
-	assert.Equal(t, 1, m.Get("c").InterSlice()[0])
+	assert.Equal(t, float64(1), m.Get("c").InterSlice()[0])
 
 	assert.True(t, m.Get("d").IsInterSlice())
-	assert.Equal(t, []interface{}{1}, m.Get("d").InterSlice()[0])
+	assert.Equal(t, []interface{}{float64(1)}, m.Get("d").InterSlice()[0])
 }
 
 func TestJSONSliceInt(t *testing.T) {
@@ -128,7 +128,7 @@ func TestJSONSliceInt(t *testing.T) {
 
 	assert.Nil(t, err)
 	require.NotNil(t, m)
-	assert.Equal(t, []objx.Map{{"b": 1}, {"c": 2}}, m.Get("a").ObjxMapSlice())
+	assert.Equal(t, []objx.Map{{"b": float64(1)}, {"c": float64(2)}}, m.Get("a").ObjxMapSlice())
 }
 
 func TestJSONSliceMixed(t *testing.T) {
@@ -223,5 +223,24 @@ func TestMapFromURLQueryWithError(t *testing.T) {
 	assert.Nil(t, m)
 	assert.Panics(t, func() {
 		objx.MustFromURLQuery("%")
+	})
+}
+
+func TestJSONTopLevelSlice(t *testing.T) {
+	slice, err := objx.FromJSONSlice(`[{"id": 10000001}, {"id": 42}]`)
+
+	assert.NoError(t, err)
+	require.Len(t, slice, 2)
+	assert.Equal(t, 10000001, slice[0].Get("id").MustInt())
+	assert.Equal(t, 42, slice[1].Get("id").MustInt())
+}
+
+func TestJSONTopLevelSliceWithError(t *testing.T) {
+	slice, err := objx.FromJSONSlice(`{"id": 10000001}`)
+
+	assert.Error(t, err)
+	assert.Nil(t, slice)
+	assert.Panics(t, func() {
+		_ = objx.MustFromJSONSlice(`{"id": 10000001}`)
 	})
 }
