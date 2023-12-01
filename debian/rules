@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ --buildsystem=golang --with=golang
+	dh $@ --builddirectory=_build --buildsystem=golang
 
 override_dh_auto_test:
 	# Don't run tests to prevent circular dependency. They depend on
