@@ -1,11 +1,12 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: objx
 Source: https://github.com/stretchr/objx
+Upstream-Name: objx
 Files-Excluded: vendor
 
 Files: *
 Copyright:
  Copyright (c) 2014 Stretchr, Inc.
+ Copyright (c) 2017-2018 objx contributors
 License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal

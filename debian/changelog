@@ -1,3 +1,30 @@
+golang-objx (0.5.0-1) unstable; urgency=medium
+
+  * New upstream version 0.5.0
+  * Bump Standards-Version to 4.6.2 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Mon, 23 Jan 2023 07:36:55 -0700
+
+golang-objx (0.4.0-1) unstable; urgency=medium
+
+  [ Debian Janitor (Jelmer Vernooĳ ) ]
+  * Remove constraints unnecessary since buster:
+    + golang-github-stretchr-objx-dev: Drop versioned constraint on
+      golang-objx-dev in Replaces and Breaks.
+
+  [ Anthony Fok ]
+  * New upstream version 0.4.0
+  * Reorder fields in debian/control and debian/copyright
+  * debian/control:
+    - Use dh-sequence-golang instead of dh-golang and --with=golang
+    - Bump Standards-Version to 4.6.1 (no change)
+    - Remove unneeded dependency on ${shlibs:Depends}
+  * debian/rules: Invoke dh with --builddirectory=_build
+  * debian/copyright: Update copyright holders
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+
+ -- Anthony Fok <foka@debian.org>  Wed, 13 Jul 2022 02:18:15 -0600
+
 golang-objx (0.3.0-1) unstable; urgency=medium
 
   * Team upload.
